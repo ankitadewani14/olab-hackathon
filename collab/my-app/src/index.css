@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column; /* Stacks editors and output vertically */
+  gap: 20px; /* Space between sections */
+  padding: 20px;
+}
+
+.editors-container {
+  display: flex;
+  gap: 20px; /* Space between the editors */
+  justify-content: space-between; /* Ensure editors are evenly spaced */
+}
+
+.editor-container {
+  flex: 1; /* Allow all editors to take equal width */
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(225, 6%, 25%);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 250px; /* Ensure minimum width */
+}
+
+.editor-title {
+  background-color: hsl(225, 6%, 13%);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.CodeMirror {
+  height: 200px; /* Fixed height for editors */
+}
+
+.output-container {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  height: 300px; /* Fixed height for output */
+  overflow: auto; /* Allow scrolling if content overflows */
+  border: 1px solid #ddd;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.save-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.save-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
